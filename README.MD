@@ -16,7 +16,26 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import library
-import { SampleModule } from 'ng-neo-loader';
+import { NeoLoaderModule } from 'ng-neo-loader';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+
+    // Specify library as an import
+    NeoLoaderModule.forRoot()
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+
+// Import library in child module
+import { NeoLoaderModule } from 'ng-neo-loader';
 
 @NgModule({
   declarations: [
@@ -34,14 +53,15 @@ import { SampleModule } from 'ng-neo-loader';
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+Once your library is imported, you can use it component in your Angular application:
 
 ```xml
-<!-- You can now use your library component in app.component.html -->
+<!-- You can now use your library component in *.component.html -->
+<app-loader></app-loader>
+
 <h1>
   {{title}}
 </h1>
-<sampleComponent></sampleComponent>
 ```
 
 ## License

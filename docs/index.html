@@ -47,6 +47,12 @@
                                 <li class="link">
                                   <a href="./index.html"  class="active" ><span class="fa fa-file-text-o"></span>README</a>
                                 </li>
+                                <li class="link">
+                                        <a href="./license.html"
+                                    >
+                                        <span class="fa fa-file-text-o"></span>LICENSE
+                                    </a>
+                                </li>
                         </ul>
                     </li>
             
@@ -175,6 +181,12 @@
                                        <li class="link">
                                          <a href="./index.html"  class="active" ><span class="fa fa-file-text-o"></span>README</a>
                                        </li>
+                                       <li class="link">
+                                               <a href="./license.html"
+                                           >
+                                               <span class="fa fa-file-text-o"></span>LICENSE
+                                           </a>
+                                       </li>
                                </ul>
                            </li>
                    
@@ -283,7 +295,26 @@ import { NgModule } from &#39;&#64;angular/core&#39;;
 import { AppComponent } from &#39;./app.component&#39;;
 
 // Import library
-import { SampleModule } from &#39;ng-neo-loader&#39;;
+import { NeoLoaderModule } from &#39;ng-neo-loader&#39;;
+
+&#64;NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+
+    // Specify library as an import
+    NeoLoaderModule.forRoot()
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+
+// Import library in child module
+import { NeoLoaderModule } from &#39;ng-neo-loader&#39;;
 
 &#64;NgModule({
   declarations: [
@@ -298,12 +329,13 @@ import { SampleModule } from &#39;ng-neo-loader&#39;;
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }</code></pre><p>Once your library is imported, you can use its components, directives and pipes in your Angular application:</p>
-<pre class="line-numbers"><code class="language-xml">&lt;!-- You can now use your library component in app.component.html --&gt;
+export class AppModule { }</code></pre><p>Once your library is imported, you can use it component in your Angular application:</p>
+<pre class="line-numbers"><code class="language-xml">&lt;!-- You can now use your library component in *.component.html --&gt;
+&lt;app-loader&gt;&lt;/app-loader&gt;
+
 &lt;h1&gt;
   {{title}}
-&lt;/h1&gt;
-&lt;sampleComponent&gt;&lt;/sampleComponent&gt;</code></pre><h2 id="license">License</h2>
+&lt;/h1&gt;</code></pre><h2 id="license">License</h2>
 <p>MIT © <a href="mailto:info@neocomplexx.com">Neocomplexx</a></p>
 
 
