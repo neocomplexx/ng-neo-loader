@@ -1,5 +1,6 @@
 # ng-neo-loader
 Loader gif for angular
+
 ## Installation
 
 To install this library, run:
