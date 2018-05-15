@@ -6,6 +6,7 @@ import { TimerObservable } from 'rxjs/observable/TimerObservable';
 
 @Injectable()
 export class LoaderService {
+    public DELAY_TIME = 500;
 
     private loaderSubject = new Subject<LoaderState>();
 
@@ -14,7 +15,7 @@ export class LoaderService {
     constructor() { }
 
     public show(): any {
-        const timer = Observable.timer(500) as TimerObservable;
+        const timer = Observable.timer(this.DELAY_TIME) as TimerObservable;
         // subscribing to a observable returns a subscription object
         const sub = timer.subscribe(t => this.loaderSubject.next(<LoaderState>{showLoading: true}));
         return sub;
