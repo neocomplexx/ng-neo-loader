@@ -1,6 +1,6 @@
 {
   "name": "ng-neo-loader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/neocomplexx/ng-neo-loader"
@@ -10,7 +10,7 @@
     "email": "info@neocomplexx.com"
   },
   "keywords": [
-    "angular"
+    "angular", "loader", "ng"
   ],
   "license": "MIT",
   "bugs": {

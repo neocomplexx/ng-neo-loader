@@ -10,7 +10,7 @@ import { LoaderState } from './loader';
 })
 export class LoaderComponent implements OnInit {
 
-    private show_loading: boolean = false;
+    public show_loading: boolean = false;
 
     private subscription: Subscription;
 

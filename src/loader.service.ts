@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { LoaderState } from './loader';
-import { Observable, Subscription } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Rx';
 import { TimerObservable } from 'rxjs/observable/TimerObservable';
 
 @Injectable()
